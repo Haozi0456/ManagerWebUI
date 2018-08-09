@@ -37,12 +37,12 @@ export default {
           password
         }).then(res => {
           const result = res.data
-          if(result.code == 100){
-            const data = result.data;
-            commit('setToken', data.token);
+          if (result.code === 100) {
+            const data = result.data
+            commit('setToken', data.token)
             resolve()
-          }else{
-            Message.error(result.msg);
+          } else {
+            Message.error(result.msg)
           }
         }).catch(err => {
           reject(err)
@@ -69,8 +69,8 @@ export default {
     getUserInfo ({ state, commit }) {
       return new Promise((resolve, reject) => {
         getUserInfo(state.token).then(res => {
-          const data = res.data.data;
-          commit('setAvator', "https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png")
+          const data = res.data.data
+          commit('setAvator', 'https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png')
           commit('setUserName', data.account)
           commit('setUserId', data.id)
           commit('setAccess', ['super_admin', 'admin'])

@@ -166,12 +166,12 @@ export default {
 
       getStatisticsByDay().then(res => {
         if (res.data.code === 100) {
-          this.asynEndVal = res.data.data.total;
+          this.asynEndVal = res.data.data.total
         } else {
           this.$Message.error({
             content: res.data.msg,
             duration: 2
-          });
+          })
         }
       }).catch(err => {
         console.log(err)

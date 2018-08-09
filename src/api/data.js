@@ -8,13 +8,12 @@ export const getTableData = () => {
   })
 }
 
-
-//获取今日收入统计
+// 获取今日收入统计
 export const getStatisticsByDay = () => {
-  let date = new Date().format("yyyy-MM-dd");
+  let date = new Date().format('yyyy-MM-dd')
   let data = {
     day: date,
-    status:1,
-  };
-  return http.post(api.service.getStatisticsByDay,data);
+    status: 1
+  }
+  return http.post(api.service.getStatisticsByDay, data)
 }

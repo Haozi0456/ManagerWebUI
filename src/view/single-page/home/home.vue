@@ -73,16 +73,16 @@ export default {
       }
     }
   },
-  methods:{
-    init(){
+  methods: {
+    init () {
       getStatisticsByDay().then(res => {
         if (res.data.code === 100) {
-          this.inforCardData[0].count = res.data.data.total;
+          this.inforCardData[0].count = res.data.data.total
         } else {
           this.$Message.error({
             content: res.data.msg,
             duration: 2
-          });
+          })
         }
       }).catch(err => {
         console.log(err)

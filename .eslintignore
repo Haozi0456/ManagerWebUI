@@ -1,6 +1,2 @@
 routers.js
-view/
-login-form.vue
-components/login-form
-axios.js
-httpHelper.js
+libs/util.js
