@@ -9,11 +9,17 @@ export const getTableData = () => {
 }
 
 // 获取今日收入统计
-export const getStatisticsByDay = () => {
-  let date = new Date().format('yyyy-MM-dd')
-  let data = {
-    day: date,
-    status: 1
-  }
+export const getStatisticsByDay = (data) => {
+
   return http.post(api.service.getStatisticsByDay, data)
+}
+// 获取今日订单统计
+export const getStatisticsOrdersByDay = (data) => {
+
+  return http.post(api.service.getStatisticsOrdersByDay, data)
+}
+
+// 获取今日收入统计
+export const getMemberCount = () => {
+  return http.post(api.service.getMemberCount, '')
 }

@@ -53,6 +53,22 @@ export default [
     }
   },
   {
+    path: '/home',
+    name: 'main-home',
+    component: Main,
+    children: [
+      {
+        path: 'main-home',
+        name: 'main-home',
+        meta: {
+          icon: '_qq',
+          title: '首页主页'
+        },
+        component: () => import('@/view/single-page/home/main-home.vue')
+      }
+    ]
+  },
+  {
     path: '/join',
     name: 'join',
     component: Main,

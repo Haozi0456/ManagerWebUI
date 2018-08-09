@@ -75,7 +75,12 @@ export default {
   },
   methods: {
     init () {
-      getStatisticsByDay().then(res => {
+      let date = new Date().format('yyyy-MM-dd')
+      let data = {
+        day: date,
+        status: 1
+      };
+      getStatisticsByDay(data).then(res => {
         if (res.data.code === 100) {
           this.inforCardData[0].count = res.data.data.total
         } else {
