@@ -36,5 +36,6 @@ module.exports = {
       .set('_conf', resolve('config'))
   },
   // 打包时不生成.map文件
-  productionSourceMap: false
+  productionSourceMap: false,
+  lintOnSave: false
 }
